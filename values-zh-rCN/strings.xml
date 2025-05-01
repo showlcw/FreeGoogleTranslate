@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string name="translate_name">芒果游戏翻译</string>
+    <string name="translation_setting_title">翻译设置</string>
+    <string name="translation_setting_source_title">识别语言</string>
+    <string name="translation_setting_to_title">目标语言</string>
+    <string name="translation_setting_translation_title">翻译方式</string>
+    <string name="ocr_setting_translation_title">文字识别</string>
+    <string name="translation_orc_no_data">当前页面无可翻译内容,请检查识别语言是否设置正确</string>
+    <string name="translation_result_error">翻译失败,请切换翻译方式再试</string>
+
+
+    <string name="translation_load_permission_error_str">获取截图权限失败</string>
+    <string name="translation_load_float_permission_error_str">获取悬浮窗权限失败</string>
+    <string name="load_image_error">获取屏幕信息失败</string>
+    <string name="language_setting_error">请检查语言是否设置正确</string>
+
+    <string name="language_Chinese">中文</string>
+    <string name="language_English">英语</string>
+    <string name="language_Japanese">日语</string>
+    <string name="language_French">法语</string>
+    <string name="language_Spanish">西班牙语</string>
+    <string name="language_Korean">韩语</string>
+    <string name="language_Portuguese">葡萄牙语</string>
+    <string name="language_Italian">意大利语</string>
+    <string name="language_German">德语</string>
+    <string name="language_Russian">俄语</string>
+    <string name="language_Arabic">阿拉伯语</string>
+    <string name="language_Danish">丹麦语</string>
+    <string name="language_Finnish">芬兰语</string>
+    <string name="language_Polish">波兰语</string>
+    <string name="language_Swedish">瑞典语</string>
+    <string name="language_Thai">泰语</string>
+    <string name="language_Traditional_Chinese">中文繁体</string>
+    <string name="language_Malay">马来语</string>
+    <string name="language_Norwegian">挪威语</string>
+    <string name="language_Vietnamese">越南语</string>
+    <string name="language_Czech">捷克语</string>
+    <string name="language_Greek">希腊语</string>
+    <string name="language_Hebrew">希伯来语</string>
+    <string name="language_Hindi">印地语</string>
+    <string name="language_Indonesian">印尼语</string>
+    <string name="language_Romanian">罗马尼亚语</string>
+    <string name="language_Serbian">塞尔维亚语</string>
+    <string name="language_Filipino">菲律宾语</string>
+    <string name="language_Khmer">高棉语</string>
+    <string name="language_Tamil">泰米尔语</string>
+    <string name="language_Hungarian">匈牙利语</string>
+    <string name="language_Dutch">荷兰语</string>
+    <string name="language_Persian">波斯语</string>
+    <string name="language_Slovak">斯洛伐克语</string>
+    <string name="language_Estonian">爱沙尼亚语</string>
+    <string name="language_Latvian">拉脱维亚语</string>
+
+
+    <string name="language_Albanian">阿尔巴尼亚语</string>
+    <string name="language_Aragorn">阿拉贡语</string>
+    <string name="language_Aymara">艾马拉语</string>
+    <string name="language_Ossetian">奥塞梯语</string>
+    <string name="language_Oriya">奥里亚语</string>
+    <string name="language_Irish">爱尔兰语</string>
+    <string name="language_Algerian_Arabic">阿尔及利亚阿拉伯语</string>
+    <string name="language_Amharic">阿姆哈拉语</string>
+    <string name="language_Azerbaijani">阿塞拜疆语 </string>
+    <string name="language_Oromo">奥罗莫语</string>
+    <string name="language_Occitan">奥克语</string>
+    <string name="language_Akan">阿肯语</string>
+    <string name="language_Assamese">阿萨姆语</string>
+
+    <string name="language_Afrikaans">南非荷兰语</string>
+    <string name="language_Catalan">加泰罗尼亚语</string>
+    <string name="language_Croatian">克罗地亚语</string>
+    <string name="language_Icelandic">冰岛语</string>
+    <string name="language_Lithuanian">立陶宛语</string>
+    <string name="language_Turkish">土耳其语</string>
+
+
+    <string name="ocr_type_baidu">百度识别</string>
+    <string name="ocr_type_huawei">华为识别</string>
+    <string name="ocr_type_google">谷歌识别</string>
+    <string name="tranlsate_type_baidu">百度翻译</string>
+    <string name="tranlsate_type_google">谷歌翻译</string>
+    <string name="ocr_unknow_tips">不能识别</string>
+    <string name="translate_unknow_tips">不支持</string>
+    <string name="google_ocr_error">暂未找到谷歌识别模型，请打开Google Play服务，识别模型会自动下载</string>
+    <string name="float_permission_title">申请悬浮窗权限</string>
+    <string name="float_permission_content">悬浮窗的权限未被打开/不允许显示其他应用的上级权限，这将导致我们无法在您玩游戏或看视频时进行屏幕翻译</string>
+
+    <string name="float_permission_open">打开权限</string>
+    <string name="translate_cancel">取消</string>
+    <string name="translate_try">请再试一次</string>
+    <string name="language_Bulgaria">保加利亚语</string>
+    <string name="language_Bengali">孟加拉语</string>
+    <string name="language_Welsh">威尔士语</string>
+    <string name="language_Gujarati">古吉拉特语</string>
+    <string name="language_Kannada">卡纳达语</string>
+    <string name="language_Macedonian">马其顿语</string>
+    <string name="language_Malayalam">马拉雅拉姆语</string>
+    <string name="language_Marathi">马拉地语</string>
+    <string name="language_Punjabi">旁遮普语</string>
+    <string name="language_Slovenian">斯洛文尼亚语</string>
+    <string name="language_Telugu">泰卢固语</string>
+    <string name="language_Tagalog">他加禄语</string>
+    <string name="language_Ukrainian">乌克兰</string>
+    <string name="language_Somali">索马里语</string>
+    <string name="language_Urdu">乌尔都语</string>
+    <string name="translate_copy_str">复制成功</string>
+    <string name="language_Bashkir">巴什基尔语</string>
+    <string name="language_Belarusian">白俄罗斯语</string>
+    <string name="language_Bumba">本巴语</string>
+    <string name="language_Baluchi">俾路支语</string>
+    <string name="language_Bhojpur">博杰普尔语</string>
+    <string name="language_Berber">柏柏尔语</string>
+    <string name="language_Northern_Sami">北方萨米语</string>
+    <string name="language_Biling">比林语</string>
+    <string name="language_Breton">布列塔尼语</string>
+    <string name="language_Pampanga">邦板牙语</string>
+    <string name="language_Northern_Sotho">北索托语</string>
+    <string name="language_Bislama">比斯拉马语</string>
+    <string name="language_Bosnian">波斯尼亚语</string>
+    <string name="language_Chuvash">楚瓦什语</string>
+    <string name="language_Tsunga">聪加语</string>
+    <string name="language_Shan">掸语</string>
+    <string name="language_Teton">德顿语</string>
+    <string name="language_Tatar">鞑靼语</string>
+    <string name="language_Dhivehi">迪维希语</string>
+    <string name="language_Sanskrit">梵语</string>
+    <string name="language_Faroese">法罗语</string>
+    <string name="language_Friuli">弗留利语</string>
+    <string name="language_Fulani">富拉尼语</string>
+    <string name="language_Gaelic">盖尔语</string>
+    <string name="language_Guarani">瓜拉尼语</string>
+    <string name="language_Congo">刚果语</string>
+    <string name="language_Greenlandic">格陵兰语</string>
+    <string name="language_Ancient_Greek">古希腊语</string>
+    <string name="language_Highland_Sorbian">高地索布语</string>
+    <string name="language_Georgian">格鲁吉亚语</string>
+    <string name="language_Hakachin">哈卡钦语</string>
+    <string name="language_Hausa">豪萨语</string>
+    <string name="language_Montenegrin">黑山语</string>
+    <string name="language_Hupa">胡帕语</string>
+    <string name="language_Haitian">海地语</string>
+    <string name="language_Kyrgyz">吉尔吉斯语</string>
+    <string name="language_Galician">加利西亚语</string>
+    <string name="language_Kabyle">卡拜尔语</string>
+    <string name="language_Kashubian">卡舒比语</string>
+    <string name="language_Corsican">科西嘉语</string>
+    <string name="language_Klingon">克林贡语</string>
+    <string name="language_Kashmiri">克什米尔语</string>
+    <string name="language_Cornish">康沃尔语</string>
+    <string name="language_Creek">克里克语</string>
+    <string name="language_Konkani">贡根语</string>
+    <string name="language_Kanuri">卡努里语</string>
+    <string name="language_Xhosa">科萨语</string>
+    <string name="language_Quechua">克丘亚语</string>
+    <string name="language_Latin">拉丁语</string>
+    <string name="language_Latjalai">拉特加莱语</string>
+    <string name="language_Lingala">林加拉语</string>
+    <string name="language_Rusynian">卢森尼亚语</string>
+    <string name="language_Romansh">罗曼什语</string>
+    <string name="language_Lao">老挝语</string>
+    <string name="language_Luganda">卢干达语</string>
+    <string name="language_Kinyarwanda">基尼亚卢旺达语</string>
+    <string name="language_Romani">罗马尼亚语</string>
+    <string name="language_Limburgish">林堡语</string>
+    <string name="language_Luxembourgish">卢森堡语</string>
+    <string name="language_Logical_language">逻辑语</string>
+    <string name="language_Manks">曼克斯语</string>
+    <string name="language_Pashto">普什图语</string>
+    <string name="language_Malagasy">马拉加斯语</string>
+    <string name="language_Marshallese">马绍尔语</string>
+    <string name="language_Mauritian_Creole">毛里求斯克里奥尔语</string>
+    <string name="language_Maltese">马耳他语</string>
+    <string name="language_Burmese">缅甸语</string>
+    <string name="language_Maitili">迈蒂利语</string>
+    <string name="language_Maori">毛利语</string>
+    <string name="language_Neapolitan">那不勒斯语</string>
+    <string name="language_South_Sotho">南索托语</string>
+    <string name="language_Nepali">尼泊尔语</string>
+    <string name="language_Papiamento">帕皮阿门托语</string>
+    <string name="language_Chichewa">齐切瓦语</string>
+    <string name="language_Twi">契维语</string>
+    <string name="language_Cherokee">切罗基语</string>
+    <string name="language_Sardinian">萨丁尼亚语</string>
+    <string name="language_Samoan">萨摩亚语</string>
+    <string name="language_Songhai">桑海语</string>
+    <string name="language_Swahili">斯瓦希里语</string>
+    <string name="language_Tunisian_Arabic">突尼斯阿拉伯语</string>
+    <string name="language_Sinhala">僧伽罗语</string>
+    <string name="language_Tajik">塔吉克语</string>
+    <string name="language_Tigrinya">提格雷尼亚语</string>
+    <string name="language_Turkmen">土库曼语</string>
+    <string name="language_Venda">文达语</string>
+    <string name="language_Walloon">瓦隆语</string>
+    <string name="language_Wolof">沃洛夫语</string>
+    <string name="language_West_Frisian">西弗里斯语</string>
+    <string name="language_Lower_Sorbian">下索布语</string>
+    <string name="language_Cebuano">宿务语</string>
+    <string name="language_Silesian">西里西亚语</string>
+    <string name="language_Hawaiian">夏威夷语</string>
+    <string name="language_Sindhi">信德语</string>
+    <string name="language_Syriac">叙利亚语</string>
+    <string name="language_Hiliganun">希利盖农语</string>
+    <string name="language_Shona">修纳语</string>
+    <string name="language_Sundanese">巽他语</string>
+    <string name="language_Inter">因特语</string>
+    <string name="language_Igbo">伊博语</string>
+    <string name="language_Armenian">亚美尼亚语</string>
+    <string name="language_Iranian">伊朗语</string>
+    <string name="language_Aceh">亚齐语</string>
+    <string name="language_Ido">伊多语</string>
+    <string name="language_Inuktitut">伊努克提图特语</string>
+    <string name="language_Yiddish">意第绪语</string>
+    <string name="language_Ingush">印古什语</string>
+    <string name="language_Yoruba">约鲁巴语</string>
+    <string name="language_Zulu">祖鲁语</string>
+    <string name="language_Zazaqi">扎扎其语</string>
+    <string name="language_Javanese">爪哇语</string>
+
+    <string name="translation_result_error_change_type">服务器有问题，请切换翻译模式重试</string>
+    <string name="translation_result_error_ok">加入会员</string>
+    <string name="ad_show_look">立即观看</string>
+
+    <string name="translate_show_result_screen_str">屏幕显示</string>
+    <string name="translate_show_result_dialog_str">弹出显示</string>
+    <string name="translate_show_result_str">显示风格</string>
+
+
+    <string name="video_load_ad_error_two_str">无法加载广告</string>
+    <string name="transalte_ad_show_title">您的无广告翻译已用完</string>
+    <string name="transalte_ad_show_content">此翻译需要观看视频广告</string>
+    <string name="transalte_how_show_ad_content">如何删除广告？</string>
+    <string name="watch_video">看视频</string>
+    <string name="search_hint_str">输入搜索内容</string>
+    <string name="watch_video_to_receive_ads_successfull">成功添加 30 个无广告翻译</string>
+
+
+    <string name="setting_one_line_title">将文本转换为1行</string>
+    <string name="setting_xiaoxie_line_title">将文本转换为小写</string>
+    <string name="setting_duanluo_line_title">自动识别段落（解决文本块换行问题）</string>
+
+    <string name="setting_huanhang_line_title">显示内容超出屏幕边界，是否换行显示</string>
+
+    <string name="remove_ad_tt">移除</string>
+    <string name="buy_ban_year">半年</string>
+    <string name="buy_san_year">季度</string>
+
+    <string name="sub_state_successfull">已订阅</string>
+    <string name="remove_ad_state_successfull">已移除</string>
+
+    <string name="setting_hide_background_mode">隐藏翻译结果页面的默认背景颜色</string>
+
+    <string name="translation_ad_setting_title">广告设置</string>
+
+    <string name="baohu_dianchi_str">忽略电池优化</string>
+    <string name="baohu_title_str">保护设置</string>
+    <string name="baohu_houtai_str">允许后台操作</string>
+
+
+    <string name="tranlsate_type_microsfot">微软翻译</string>
+    <string name="result_more_setting">更多设置</string>
+    <string name="result_default_textsize_str">默认文本大小</string>
+    <string name="result_auto_textsize_str">最小文本大小</string>
+    <string name="result_auto_textsize_title_str">文字大小自动适应</string>
+    <string name="result_title_str">结果设定</string>
+
+    <string name="ocr_type_default">默认标识</string>
+    <string name="download_title_str">下载</string>
+    <string name="downloading">正在下载…</string>
+    <string name="downloading_language">正在下载语言数据…</string>
+    <string name="percentage_downloaded">占总数的百分比：</string>
+    <string name="model_not_exist_str">语言模型不存在</string>
+    <string name="model_init_error_str">语言数据错误</string>
+    <string name="model_download_tips_str">您需要先将语言模拟下载到您的设备</string>
+
+    <string name="language_Algonquinian">阿尔冈昆尼安语</string>
+    <string name="language_Bambara">班巴拉语</string>
+    <string name="language_Ewe">埃维语</string>
+    <string name="language_Hiligaynon">希利盖农语</string>
+    <string name="language_Iloko">伊洛卡诺语</string>
+    <string name="language_Kalaallisut">卡拉利苏特语</string>
+    <string name="language_Kongo">刚果语</string>
+    <string name="language_Manx">马恩岛语</string>
+
+    <string name="language_Nyanja">尼昂加语</string>
+    <string name="language_Ojibwa">奥吉布瓦语</string>
+    <string name="language_Romany">罗姆语</string>
+    <string name="language_Sango">桑戈语</string>
+    <string name="language_Scots">苏格兰语</string>
+    <string name="language_Scottish_Gaelic">苏格兰盖尔语</string>
+    <string name="language_Southern_Sotho">南索托语</string>
+    <string name="language_Western_Frisian">西弗里斯兰语</string>
+    <string name="language_Zapotec">萨巴特克语</string>
+    <string name="language_Tsonga">松加语</string>
+
+    <string name="language_Bhojpuri">博杰普里语</string>
+    <string name="language_Dogri">多格里语</string>
+    <string name="language_Hmong">苗族语</string>
+    <string name="language_Ilocano">伊洛卡诺语</string>
+    <string name="language_Krio">克里奥尔语</string>
+    <string name="language_Sorani">索拉尼</string>
+    <string name="language_Maithili">迈蒂利语</string>
+    <string name="language_Meiteilon">梅泰隆</string>
+    <string name="language_Mizo">米佐语</string>
+    <string name="language_Sepedi">塞佩蒂语</string>
+    <string name="language_Sesotho">索托语</string>
+
+
+    <string name="setting_ocr_notice_tip_title">通知栏设置</string>
+    <string name="setting_ocr_notice_summary">显示通知栏，快速启动或停止翻译</string>
+    <string name="setting_ocr_notice_title">显示通知栏</string>
+    <string name="notice_start_translate_str">开启翻译</string>
+    <string name="notice_stop_translate_str">关闭翻译</string>
+
+
+    <string name="tranlsate_type_google_offline">谷歌翻译（离线）</string>
+    <string name="tranlsate_type_mymemory">机器翻译</string>
+    <string name="tranlsate_error_change_tips_str">如果翻译不准确，可以点击设置切换翻译方式</string>
+    <string name="google_offline_language_model_no_exists_str">语言模型不存在，是否下载？</string>
+    <string name="google_offline_language_download_error_str">下载失败</string>
+    <string name="google_offline_language_download_success_str">下载成功</string>
+    <string name="tranlsate_auto_tips_str">您设置开启了自动翻译功能，是否使用自动翻译功能？</string>
+    <string name="tranlsate_close_auto_tips_str">是否关闭自动翻译功能？</string>
+    <string name="tranlsate_auto_open_str">开启</string>
+    <string name="tranlsate_auto_close_str">关闭</string>
+    <string name="tranlsate_auto_continue_str">继续</string>
+
+
+    <string name="tranlsate_double_auto_tips_str">是否启用自动翻译模式?</string>
+
+    <string name="auto_title_setting_str">自动翻译设置</string>
+    <string name="auto_title_summary_str">间隔一定时间自动翻译屏幕信息,如果间隔时间设置较短，翻译方式请选择谷歌离线翻译，响应更快</string>
+    <string name="auto_title_title_str">自动翻译功能</string>
+    <string name="auto_set_spacetime_str">设置间隔时间</string>
+    <string name="auto_set_spacetime_tips_str">秒</string>
+    <string name="text_translate_scenes_screen_translate">屏幕翻译</string>
+    <string name="text_translate_scenes_chat_translate">聊天翻译</string>
+    <string name="translation_new_expire_tips">可用时间已到，可通过购买会员或做任务增加翻译时间或翻译数量</string>
+    <string name="translation_new_task_tips">做任务</string>
+    <string name="add_reward_fail_tips">仅观看完整视频即可获得奖励</string>
+    <string name="ocr_type_baidu_customize">百度定制识别</string>
+    <string name="tranlsate_type_baidu_customize">百度定制翻译器</string>
+    <string name="customize_channel_null">自定义通道不存在</string>
+    <string name="auto_ocr_no_user_tips">非常抱歉，由于识别渠道紧张，自动翻译暂时不支持百度识别</string>
+    <string name="auto_ocr_no_user_tips_chinese">我很抱歉。由于翻译渠道紧张，部分用户挂机时间较长，占用资源较多。自动翻译不支持百度识别。</string>
+    <string name="language_Kazakh">哈萨克语</string>
+    <string name="language_Kurdish">库尔德语</string>
+
+
+    <string name="auto_set_result_spacetime_str">设置显示结果的时间</string>
+
+    <string name="language_Auto">自动</string>
+
+
+    <string name="language_Bulgarian">保加利亚语</string>
+    <string name="language_Mongolian">蒙古语</string>
+    <string name="language_Basque">巴斯克语</string>
+    <string name="language_Uzbek">乌兹别克语</string>
+    <string name="language_Esperanto">世界语</string>
+    <string name="language_Uyghur">维吾尔族语</string>
+    <string name="language_Frisian">弗里斯兰语</string>
+    <string name="net_error_str">网络异常，请检查您的网络连接</string>
+    <string name="translate_error_str">翻译错误，请稍后再试</string>
+
+
+    <string name="chat_str">聊天翻译</string>
+    <string name="chat_install_str">安装</string>
+    <string name="chat_remonned_str">应用推荐</string>
+    <string name="chat_content_str">聊天无边界，阅读无障碍</string>
+
+
+    <string name="translation_vip_expire_tips">会员已经到期或者没有可用翻译次数，您可以通过观看视频或购买会员继续使用</string>
+    <string name="translation_connect_failed_tips">没有可用翻译次数，并且与Google服务连接失败，不能获取会员信息，请连接成功后再试</string>
+    <string name="mine_vip_tips_str">开通会员，享受更多权益</string>
+    <string name="mine_vip_open_str">开通会员</string>
+    <string name="mine_score_str">评分</string>
+    <string name="mine_like_str">点赞</string>
+    <string name="mine_update_str">更新</string>
+    <string name="mine_share_str">分享</string>
+    <string name="mine_setting_str">设置</string>
+    <string name="mine_feedback_str">意见反馈</string>
+    <string name="mine_about_str">关于我们</string>
+    <string name="update_version_title_tips_str">发现新版本，确定更新吗</string>
+    <string name="update_version_qianggeng_tips_str">发现新版本，你必须要先更新版本才能正常使用</string>
+
+    <string name="update_version_no_new_str">暂无新版本</string>
+    <string name="mine_no_ad_count_str">剩余翻译次数</string>
+    <string name="vip_expire_str">过期提示</string>
+    <string name="new_look_video">看视频</string>
+    <string name="vip_center_title">会员中心</string>
+    <string name="vip_buy_str">订阅</string>
+    <string name="vip_buy_week">一周</string>
+    <string name="vip_buy_month">一月</string>
+    <string name="vip_buy_year">一年</string>
+    <string name="vip_buy_ban_year">半年</string>
+    <string name="vip_tequan_title">会员特权</string>
+    <string name="vip_wuxian_title">无限制翻译</string>
+    <string name="vip_speed_title">翻译速度更快</string>
+    <string name="vip_jingzhun_title">翻译更准</string>
+    <string name="vip_siren_title">专有翻译通道</string>
+    <string name="vip_jishi_title">及时响应</string>
+    <string name="vip_wending_title">更稳定的服务</string>
+    <string name="vip_wathch_video_add_count_tips_str">看视频增加翻译次数</string>
+    <string name="vip_wathch_video_add_count_content_str">只有观看完整视频才可以获得,每天可以获取一次</string>
+    <string name="vip_today_user_title">翻译次数，一天只能获取一次，请明天再来</string>
+
+
+    <string name="float_setting_str">悬浮球设置</string>
+    <string name="float_transparency_str">透明度</string>
+    <string name="float_size_str">大小</string>
+    <string name="float_permission_error_tips_str">打开权限设置界面失败，请自行查找打开悬浮球权限</string>
+    <string name="float_tiebian_str">自动贴边</string>
+    <string name="float_tiebian_content_str">拖动悬浮球后自动回到屏幕边缘</string>
+    <string name="float_hide_str">自动隐藏</string>
+    <string name="float_hide_content_str">长时间不使用，将会自动隐藏到屏幕边缘，不影响操作，可以通过点击触发重新显示</string>
+    <string name="setting_auto_close_result_str">翻译结果页面自动关闭</string>
+    <string name="translate_copy_source_str">复制原文成功</string>
+    <string name="translate_copy_translate_str">成功复制翻译结果</string>
+    <string name="buy_permanent">永久</string>
+
+    <string name="translate_free_error">免费通道负载较大，请切换翻译方式再试，如果在中国境内使用，需要使用VPN才能正常使用，或者使用我们中国境内版本“芒果游戏翻译”</string>
+    <string name="translate_free_open_vip">会员资格</string>
+    <string name="ocr_type_space">芒果识别</string>
+
+    <string name="vip_tips_str">此功能只有会员才能使用，请开通会员</string>
+
+
+    <string name="mine_login_tip">登录领取翻译次数</string>
+    <string name="mine_get_count_success">领取成功</string>
+    <string name="mine_get_count_fail">领取失败，请稍后再试</string>
+    <string name="mine_get_count_exist_str">今天已经领取，请明天再来</string>
+    <string name="mine_click_get_str">点击领取翻译次数</string>
+    <string name="mine_click_geted_str">已经领取</string>
+    <string name="mine_loginout_str">确定退出登录吗?</string>
+    <string name="mine_google_login_tip">谷歌账号登录</string>
+    <string name="mine_huawei_login_tip">华为账号登录</string>
+    <string name="mine_sanum_login_tip">三星账号登录</string>
+    <!-- <string name="task_obtain">Obtain</string>
+     <string name="task_completed">Completed</string>-->
+
+    <string name="task_dis_title_str">评价软件</string>
+    <string name="task_dis_title_tips">评价我们软件获取翻译次数</string>
+    <string name="login_first_str">请先登录</string>
+    <string name="pay_error_str">支付失败</string>
+    <string name="pay_cancel_str">取消支付</string>
+    <string name="task_obtain">获取</string>
+    <string name="task_completed">已完成</string>
+    <string name="task_watch_video_str">看视频</string>
+
+
+    <string name="login_google_welcome">您好~\n欢迎来到屏幕翻译！</string>
+    <string name="mine_facebook_login_tip">脸书帐号登录</string>
+    <string name="login_common_slogan">登录即表示您同意我们的</string>
+    <string name="login_common_successfull_str">登陆成功</string>
+    <string name="login_common_fail">登录失败，请再次尝试</string>
+    <string name="wait_common_tip_str">敬请关注</string>
+    <string name="task_common_complete_tips_str">任务已完成</string>
+    <string name="personal_common_login">登录</string>
+    <string name="user_common_terms">使用条款</string>
+    <string name="user_common_privacy">隐私政策</string>
+    <string name="login_common_agree_protocol_Str">请勾选同意用户协议</string>
+
+    <string name="watch_video_to_receive_ads_successfull_new">成功添加 20 个无广告翻译</string>
+    <string name="ad_sapce_time_new">您可以稍等片刻，给点我们准备广告的时间</string>
+
+
+    <string name="float_permission_tips">TIPS：在应用列表中找到芒果字幕翻译，打开允许开关</string>
+    <string name="translation_tips">单击翻译，长按可以唤起翻译设置并且选择区域翻译</string>
+
+
+    <string name="translation_new_tips">点击开始,长按进入设置界面</string>
+    <string name="translation_drag_tips">拖动选择翻译区域</string>
+    <string name="float_new_permission_tips">TIPS：在应用列表中找到视频字幕翻译，打开允许开关</string>
+    <string name="app_new_name">视频字幕翻译</string>
+    <string name="slogan_str">一键观看海外影视</string>
+    <string name="title_new_home">字幕翻译</string>
+    <string name="mine_jiben_str">基本功能</string>
+    <string name="mine_no_ad_time_str">剩余翻译时长</string>
+    <string name="vip_wathch_video_add_time_tips_str">看视频增加翻译时长</string>
+    <string name="load_ading_tips">正在加载广告</string>
+    <string name="watch_video_to_add_time_successfull_new">成功添加20分钟</string>
+    <string name="time_day_str">天</string>
+    <string name="time_hour_str">小时</string>
+    <string name="time_minute_str">分钟</string>
+
+
+    <string name="task_wathch_video_add_count_tips_str">看视频获取翻译次数</string>
+    <string name="task_wathch_video_add_count_content_str">只有观看完整视频才可以获得,两次广告显示间隔不能低于五分钟</string>
+    <string name="task_download_str">下载</string>
+    <string name="task_login_tips_str">您需要先登录，才能做这个任务</string>
+    <string name="task_space_time_str">两次广告显示间隔不能低于五分钟,请稍后再试</string>
+    <string name="time_new_day_str">天</string>
+
+    <string name="result_background_color_str">背景颜色</string>
+    <string name="result_background_alpha_str">背景透明度</string>
+    <string name="result_background_text_size_str">文本大小</string>
+    <string name="result_alpha_tips_str">透明</string>
+    <string name="result_clolor_black_str">黑色</string>
+    <string name="result_clolor_green_str">墨绿色</string>
+    <string name="result_clolor_blue_str">深蓝色</string>
+    <string name="result_clolor_yellow_str">浅黄色</string>
+    <string name="result_clolor_red_str">珊瑚红</string>
+    <string name="result_clolor_purple_str">蓝紫色</string>
+    <string name="setting_result_setting">结果设置</string>
+    <string name="setting_result_content_setting">设置显示背景颜色、透明度、文本大小等</string>
+
+
+    <string name="compensate_year">补偿</string>
+    <string name="request_permission_error">获取权限失败</string>
+    <string name="ocr_type_youdao">有道识别</string>
+    <string name="setting_key_title">快捷键翻译</string>
+    <string name="setting_open_key_title">开启快捷键翻译</string>
+    <string name="setting_key_summary_title">开启悬浮球后，你可以：\n1、单击音量加按键可以全屏翻译 \n2、双击击音量加按键可以选择区域翻译\n2、单击音量减按键可以自动翻译</string>
+    <string name="auto_latin_str">拉丁字符</string>
+    <string name="auto_latin_tips_str">只能识别基于拉丁字符集的文本</string>
+    <string name="language_Chinese_Traditional">中文繁体</string>
+    <string name="language_Auto_Identify">自动</string>
+    <string name="name_baidu_str">百度</string>
+    <string name="name_googe_str">谷歌</string>
+    <string name="name_googe_offline_str">谷歌(离线)</string>
+    <string name="name_huawei_str">华为</string>
+    <string name="name_youdao_str">有道</string>
+    <string name="name_mango_str">芒果</string>
+
+
+    <string name="voice_error_tips">非常抱歉，你的设备不支持语言输入 </string>
+    <string name="key_accessibility_description">监听声音按键，通过按键情况进行快捷键翻译</string>
+    <string name="speed_error_tips_str">数据丢失或不受支持</string>
+    <string name="transparent_title_start_tips">找到</string>
+    <string name="transparent_title_end_tips">打开无障碍服务</string>
+
+
+    <string name="translation_load_record_permission_error_str">获取录音权限失败</string>
+    <string name="speed_drag_tips">拖动选择实时语音翻译结果显示区域</string>
+    <string name="speed_setting_str">语音翻译设置</string>
+    <string name="result_background_text_color_str">文本颜色</string>
+    <string name="select_text_color_str">选择文本颜色</string>
+    <string name="speed_setting_hide_source_str">隐藏识别内容</string>
+    <string name="speed_setting_hide_type_str">语音类型是否隐藏</string>
+    <string name="speed_not_support_language_str">不支持该语言</string>
+    <string name="speed_ocr_error_str">服务器未知错误,错误码：</string>
+    <string name="speed_model_not_exists_str">模型不存在</string>
+    <string name="speed_model_init_error_str">初始化识模型出错</string>
+    <string name="speed_connect_error_str">连接服务器失败，请点击重试</string>
+    <string name="speed_server_error_str">服务器繁忙,请联系客服解决</string>
+    <string name="speed_get_time_error_str">获取翻译时长出错,请联系客服解决</string>
+    <string name="speed_invalid_error_str">无效音频,请检查音频并重试</string>
+    <string name="speed_direction_error_str">语言方向不支持,请检查语言是否选择错误</string>
+    <string name="speed_recognizer_error_str">识别语音出现问题</string>
+    <string name="speed_recognizer_init_error_str">实例化录音器出现问题</string>
+    <string name="speed_recognizer_permission_error_str">获取录音权限失败，请先打开录音权限</string>
+    <string name="speed_version_low_str">系统版本过低</string>
+    <string name="speed_drag_tips_str">可拖动调整显示位置，再次双击取消拖动状态</string>
+
+    <string name="vip_half_hour">30分钟</string>
+    <string name="vip_one_hour">1小时</string>
+    <string name="vip_six_hour">6小时</string>
+
+    <string name="speed_type_str">语音识别方式</string>
+    <string name="speed_select_tips_str">选择多种语音识别方式</string>
+    <string name="speed_select_type_str">选择语音识别</string>
+
+
+    <string name="home_voice_type_title">声音来源</string>
+    <string name="home_voice_mic_title">麦克风</string>
+    <string name="home_voice_phone_title">手机内部</string>
+    <string name="home_select_voice_source_str">选择声音来源</string>
+
+    <string name="subtitl_result_one_line_tips_str">一行显示</string>
+    <string name="language_common_tips_str">常用语言</string>
+    <string name="language_all_tips_str">所有语言</string>
+
+    <string name="action_help">帮助</string>
+    <string name="speed_tips_1">聆听喜欢的主播~</string>
+    <string name="speed_tips_bottom_1">语言不在是沟通的障碍</string>
+    <string name="speed_tips_2">欣赏海外大片~ ~</string>
+    <string name="speed_tips_bottom_2">语言不在是观看的障碍.</string>
+    <string name="speed_tips_3">畅玩国外游戏~</string>
+    <string name="speed_tips_bottom_3">语言不在是兴趣通的障碍</string>
+    <string name="speed_start_tips">点击开始语音翻译</string>
+    <string name="login_top_new_welcome">您好~\n欢迎来到实时语音翻译！</string>
+    <string name="app_voice_name">实时语音翻译</string>
+    <string name="app_video_voice_name">视频语音翻译</string>
+    <string name="setting_comic_help">漫画识别</string>
+    <string name="setting_comic_content_help">识别内容是漫画时，请开启漫画识别</string>
+
+    <string name="screen_ad_name">屏幕翻译</string>
+    <string name="screen_content_name">一键实时翻译屏幕</string>
+    <string name="voice_ad_name">实时翻译视频、直播、会议</string>
+
+
+    <string name="ad_setting_chaping_title_str">首页插屏</string>
+    <string name="ad_setting_chaping_tips_str">随机显示，每天显示一次</string>
+    <string name="ad_setting_splash_title_str">开屏广告</string>
+    <string name="ad_setting_tips_str">提示：成功显示一次广告，增加20次无广告翻译</string>
+    <string name="daoban_tips">您好，经过检测，您现在使用的是盗版软件，存在信息泄露风险，请下载使用官方正版软件</string>
+    <string name="close_str">关闭</string>
+
+    <string name="info_error_content">获取翻译配置信息失败，请先获取相关配置信息，再开始翻译。我们软件只在谷歌应用市场发布，如果信息一直获取失败，请到谷歌应用市场下载正版软件！</string>
+    <string name="main_get_str">获取</string>
+    <string name="service_sign_error_str">缺少相关翻译配置信息，请检查你现在使用的版本是否是官方正版</string>
+    <string name="main_get_success_str">获取配置信息成功</string>
+    <string name="main_get_fail_str">获取配置信息失败，请再次确认使用的版本是否为官方正版！</string>
+
+    <string name="reviewInfo_successfull_str">已经完成评价</string>
+    <string name="reviewInfo_cancel_str">已经取消评价</string>
+    <string name="main_picture_title_str">图片翻译</string>
+
+    <string name="play_setting">播放设置</string>
+    <string name="play_auto_result_setting">自动播放结果</string>
+    <string name="play_auto_play_setting">自动播放设置</string>
+    <string name="play_play_queque_setting">排队策略</string>
+    <string name="play_play_speed_setting">播放速度</string>
+    <string name="play_play_queque_new_setting">播放最新</string>
+    <string name="play_play_queque_shunxu_setting">顺序播放</string>
+    <string name="setting_hide_bottom_btn">隐藏底部按钮</string>
+    <string name="setting_full_translate_setting_str">全屏翻译设置</string>
+    <string name="setting_full_translate_click_str">点击翻译内容</string>
+    <string name="setting_full_translate_click_summer_str">部分翻译内容较小，点击后可以放大显示，对翻译内容进行复制、读写等</string>
+    <string name="setting_full_translate_close_type_str">关闭方式</string>
+    <string name="setting_full_translate_close_type_conteng_str">如何关闭翻译结果界面</string>
+
+    <string name="setting_full_translate_close_click_null_str">点击关闭（如果开启翻译内容点击，则点击空白区域关闭）</string>
+    <string name="setting_full_translate_close_huadong_str">手势滑动关闭</string>
+    <string name="expire_no_time_tips">已经没有可以使用的翻译时间，请先获取翻译时长</string>
+    <string name="leancode_connect_failed_tips">与服务连接失败，不能获取相关用户信息，请连接成功后再试</string>
+
+    <string name="mediaProjection_connect_failed_tips">获取屏幕信息失败，请点击重新获取</string>
+    <string name="mediaProjection_voice_failed_tips">获取声音信息失败，请点击重新获取</string>
+    <string name="history_title_str">查看翻译结果</string>
+    <string name="history_empty_str">暂无数据</string>
+    <string name="history_delete_successfull_str">删除成功</string>
+    <string name="history_save_successfull_str">保存成功</string>
+    <string name="history_save_fail_str">保存失败</string>
+    <string name="history_update_successfull_str">修改成功</string>
+    <string name="history_editor_str">编辑</string>
+    <string name="history_delete_str">删除</string>
+    <string name="history_update_tips_str">请先修改数据，然后再提交</string>
+    <string name="history_export_str">导出</string>
+    <string name="history_open_str">打开</string>
+    <string name="history_copy_str">复制</string>
+    <string name="history_modify_title_str">修改标题</string>
+    <string name="history_modify_content_str">修改内容</string>
+    <string name="setting_auto_save_tips">自动保存翻译结果</string>
+
+
+
+    <string name="personal_inviate_str">分享加时长</string>
+    <string name="personal_task_str">任务中心</string>
+    <string name="personal_shop_str">会员中心</string>
+
+    <string name="invite_code_title_str">邀请码</string>
+    <string name="you_invite_code_str">你的邀请码</string>
+    <string name="invite_people_count_str">已经邀请人数</string>
+    <string name="tips_n1_1_2_n2">TIPS：\n1、每邀请1人将能给你和被邀请人都增加2天会员时间\n2、点击右上角邀请码，输入对方的邀请码既可以获取会员时间</string>
+    <string name="invite_title_str">邀请</string>
+
+    <string name="invite_edittext_title_str">请输入邀请码</string>
+    <string name="invite_code_null_tips_str">邀请码不能为空</string>
+    <string name="invite_code_same_tips_str">只能使用其他人的邀请码</string>
+    <string name="invite_code_exits_tips_str">你已经使用过邀请码，不能重复使用</string>
+    <string name="invite_code_not_exits_str">邀请码不正确，请检查后再试</string>
+    <string name="invite_code_check_error_str">获取邀请码信息失败，请稍后重试</string>
+    <string name="invite_successfull_str">邀请码使用成功,恭喜你获得两天的会员时间</string>
+    <string name="load_userinfo_error_str">获取用户信息失败</string>
+    <string name="register_successfull_str">注册成功,恭喜你获得两天的会员时间</string>
+
+
+    <string name="vip_new_sub_str">订阅</string>
+    <string name="vip_new_subed_str">已订阅</string>
+    <string name="vip_new_buy_str">购买</string>
+
+
+    <string name="welfare_edittext_title_str">请输入福利码</string>
+    <string name="welfare_code_title_str">福利码</string>
+
+    <string name="welfare_code_null_tips_str">福利码不能为空</string>
+    <string name="welfare_code_exits_tips_str">福利码不能重复使用</string>
+    <string name="welfare_code_not_exits_str">福利码不正确，请检查后再试</string>
+    <string name="welfare_code_check_error_str">获取福利码信息失败，请稍后重试</string>
+    <string name="welfare_successfull_str">福利码使用成功 </string>
+
+
+    <string name="vip_new_kefu_str">联系我们</string>
+    <string name="userinfo_new_account_str">用户中心</string>
+    <string name="userinfo_new_logout_str">退出登录</string>
+
+
+    <string name="userinfo_new_sign_out_str">退出登录</string>
+    <string name="userinfo_new_user_state_str">用户类型</string>
+    <string name="userinfo_new_user_vip_str">会员用户</string>
+    <string name="userinfo_new_user_free_str">免费用户</string>
+    <string name="userinfo_new_user_sub_str">订阅用户</string>
+
+    <string name="auto_translate_no_support_str">不能使用使用自动翻译功能</string>
+    <string name="translate_vip_tips_support_str">当前免费翻译服务器繁忙，你可以通过订阅使用更稳定的翻译服务</string>
+    <string name="ocr_no_support_tips_str">当前识别方式不支持</string>
+    <string name="ocr_change_type_tips_str">你可以选择其他识别方式</string>
+    <string name="translate_no_support_tips_str">当前翻译方式不支持</string>
+    <string name="translate_change_type_tips_str">你可以选择其他翻译方式</string>
+
+    <string name="translate_new_ocr_error_str">没有识别到有用信息，你可以通过长按悬浮球，选择全屏OCR识别翻译</string>
+    <string name="tranlsate_new_open_permission_str">开启</string>
+    <string name="tranlsate_new_open_permission_tips_str">需要识别屏幕上面的文字吗？请首先打开屏幕翻译辅助功能</string>
+    <string name="setting_long_screen_translate_str">屏幕翻译</string>
+    <string name="setting_long_image_translate_str">图片翻译</string>
+    <string name="setting_long_home_translate_str">主页</string>
+    <string name="text_new_recognize_description">启用此服务，以便我们可以读取并翻译应用界面上的内容，同时支持将输入框内容翻译成指定语言。\n \n 注意：为防止反复开启该权限，请到系统设置授予我们自启动权限。\n \n隐私声明：我们不会收集任何个人数据</string>
+    <string name="welcome_user_video_subtitle_translate">您好~\n欢迎来到视频字幕翻译！</string>
+    <string name="welcome_user_chat_translate">您好~\n欢迎来到芒果翻译！</string>
+    <string name="vip_sub_tip_str">订阅用户才能使用这个语言</string>
+    <string name="version_new_str">版本号</string>
+
+    <string name="vip_expire_time_str">到期时间</string>
+    <string name="vip_ad_get_30_time_str">成功获取30分钟会员时间</string>
+    <string name="vip_watch_ad_get_30_time_str">看视频获取会员时间</string>
+    <string name="register_successfull_get_timestr">注册成功，恭喜你获取1个小时的会员时间</string>
+    <string name="vip_new_sub_tip_str">订阅或者会员用户才能使用这个语言，你可以通过看广告获取会员，或者订阅获取权限</string>
+    <string name="translate_new_vip_tips_support_str">当前免费翻译服务器繁忙，你可以通过订阅或者看广告获取会员时间，使用更稳定的翻译服务</string>
+
+    <string name="mine_honor_login_tip">荣耀账号登录</string>
+    <string name="new_version_tips_tip">由于版本问题，暂不支持订阅，你可以选择我们另外一个软件进行订阅，功能相同，如果是已订阅用户，也可以联系客服进行会员迁移</string>
+    <string name="setting_long_text_translate_str">文字翻译</string>
+    <string name="setting_long_subtit_translate_str">字幕翻译</string>
+    <string name="setting_long_area_translate_str">区域翻译</string>
+    <string name="setting_long_chat_translate_str">聊天翻译</string>
+    <string name="setting_long_tap_translate_str">点击翻译</string>
+    <string name="home_update_pro_title_str">升级到专业版</string>
+    <string name="home_update_pro_content_str">解锁更多功能，无限使用</string>
+
+    <string name="unlock_more_features">解锁更多功能</string>
+    <string name="unlock_more_features_desc">即时字幕翻译，无限使用全球翻译</string>
+    <string name="purchase_ad_free">无广告</string>
+    <string name="purchase_premium_content">魔法翻译</string>
+    <string name="purchase_voice_translation">即时快速翻译屏幕界面</string>
+    <string name="subscribe_directly">直接订阅</string>
+    <string name="video_ad_tip_txt">观看广告就有机会使用它</string>
+
+
+    <string name="tranlsate_close_subtitle_tips_str">是否关闭字幕翻译?</string>
+    <string name="tranlsate_area_small_tips_str">选择区域过小</string>
+    <string name="vip_sub_subitite_str">订阅用户才能使用，请先订阅</string>
+
+    <string name="dialog_btn_ok_str">确定</string>
+    <string name="float_first_start_tips">悬浮球使用说明</string>
+    <string name="float_first_start_1_tips">1、单击悬浮球开始屏幕翻译</string>
+    <string name="float_first_start_2_tips">2、双击悬浮球开始自动翻译</string>
+    <string name="float_first_start_3_tips">2、长按悬浮球进入更多翻译界面，你可以选择字幕翻译、图片翻译、文字翻译及设置等</string>
+    <string name="translate_cishu_count_1_str">次</string>
+    <string name="translate_cishu_count_str">次数</string>
+    <string name="vip_remove_ad_title">删除广告</string>
+    <string name="contrast_duizhao_title_str">文本对比</string>
+    <string name="contrast_edit_str">编辑原文</string>
+    <string name="language_recently_tips_str">最近使用过</string>
+
+
+    <string name="country_Israel">以色列</string>
+    <string name="country_Jordan">约旦</string>
+    <string name="country_United_Arab_Emirates">阿拉伯联合酋长国</string>
+    <string name="country_Bahrain">巴林</string>
+    <string name="country_Algeria">阿尔及利亚</string>
+    <string name="country_Saudi_Arabia">沙特阿拉伯</string>
+    <string name="country_Iraq">伊拉克</string>
+    <string name="country_Kuwait">科威特</string>
+    <string name="country_Morocco">摩洛哥</string>
+    <string name="country_Tunisia">突尼斯</string>
+    <string name="country_Oman">阿曼</string>
+    <string name="country_State_of_palestine">巴勒斯坦国</string>
+    <string name="country_Qatar">卡塔尔</string>
+    <string name="country_lebanon">黎巴嫩</string>
+    <string name="country_Egypt">埃及</string>
+    <string name="country_Brazil">巴西</string>
+    <string name="country_Portugal">葡萄牙</string>
+    <string name="country_India">印度</string>
+    <string name="country_Singapore">新加坡</string>
+    <string name="country_Sri_Lanka">斯里兰卡</string>
+    <string name="country_Malaysia">马来西亚</string>
+    <string name="country_Spain">西班牙</string>
+    <string name="country_Argentina">阿根廷</string>
+    <string name="country_Bolivia">玻利维亚</string>
+    <string name="country_Chile">智利</string>
+    <string name="country_Colombia">哥伦比亚</string>
+    <string name="country_Costa_Rica">哥斯达黎加</string>
+    <string name="country_Ecuador">厄瓜多尔</string>
+    <string name="country_El_Salvador">萨尔瓦多</string>
+    <string name="country_USA">美国</string>
+    <string name="country_Guatemala">危地马拉</string>
+    <string name="country_Honduras">洪都拉斯</string>
+    <string name="country_Mexico">墨西哥</string>
+    <string name="country_Nicaragua">尼加拉瓜</string>
+    <string name="country_Panama">巴拿马</string>
+    <string name="country_Paraguay">巴拉圭</string>
+    <string name="country_Peru">秘鲁</string>
+    <string name="country_Puerto_Rico">波多黎各</string>
+    <string name="country_Dominican_Republic">多米尼加共和国</string>
+    <string name="country_Uruguay">乌拉圭</string>
+    <string name="country_Venezuela">委内瑞拉</string>
+    <string name="country_Canada">加拿大</string>
+    <string name="country_France">法国</string>
+    <string name="country_Bengal">孟加拉</string>
+    <string name="country_Pakistan">巴基斯坦</string>
+
+
+    <string name="main_conversation_translate_str">对话翻译</string>
+    <string name="main_conversation_str">对话</string>
+    <string name="conversation_invalid_str">非常抱歉，你的设备不支持语音识别，请先下载语音识别组件</string>
+    <string name="conversation_speak_str">请开始你的声音</string>
+    <string name="conversation_clear_str">清除</string>
+    <string name="voice_not_support_str">不支持该语言</string>
+
+
+    <string name="menu_function_setting_str">按键设置</string>
+    <string name="menu_translate_setting_str">翻译设置</string>
+    <string name="menu_result_setting_str">结果设置</string>
+    <string name="menu_common_setting_str">通用设置</string>
+    <string name="menu_other_setting_str">其他设置</string>
+
+
+    <string name="float_key_setting_str">悬浮球按键设置</string>
+    <string name="float_key_click_str">单击</string>
+    <string name="float_key_double_click_str">双击</string>
+    <string name="float_key_long_click_str">长按</string>
+    <string name="function_full_translate_str">全屏翻译</string>
+    <string name="function_area_translate_str">区域翻译</string>
+    <string name="function_menu_translate_str">菜单窗口</string>
+    <string name="function_auto_translate_str">自动翻译</string>
+    <string name="permission_screen_title">屏幕截图权限申请</string>
+    <string name="permission_screen_content">为了能够获取屏幕信息并且进行翻译，我们需要申请使用截屏权限，请选择允许</string>
+
+    <string name="login_out_zhuxiaos_title_str">注销账号</string>
+    <string name="login_out_zhuxiaos_content_str">确定注销账号吗?注销后将不能找回账号下的资产信息</string>
+    <string name="login_out_zhuxiaos_success_str">注销账号成功</string>
+    <string name="login_out_zhuxiaos_fail_str">注销账号失败，请稍后重试</string>
+
+    <string name="login_out_zhuxiaos_progress_str">删除账号中...</string>
+    <string name="vip_purchase_str">购买</string>
+    <string name="vip_purchased_str">已经购买</string>
+    <string name="vip_auto_sub_str">到期自动订阅</string>
+    <string name="manager_purchase_str">管理订阅</string>
+    <string name="vip_permanent_str">永久使用</string>
+    <string name="vip_news_week_str">周</string>
+    <string name="vip_news_month_str">月</string>
+    <string name="vip_news_year_str">年</string>
+    <string name="vip_news_limit_str">没有限制，随时可以取消</string>
+    <string name="name_gemini_str">人工智能</string>
+    <string name="vip_sub_ai_tip_str">只有订阅用户才能使用</string>
+
+    <string name="comic_tips_str">如果识别内容不是漫画，请不要开启漫画模式，否则将会影响识别结果</string>
+
+    <string name="youdao_time_error_str">时间戳无效导致签名校验失败,请更新设备时间</string>
+    <string name="youdao_time_set_str">设置时间</string>
+    <string name="mine_tiktok_login_tip">抖音(中国版)账号登录</string>
+    <string name="mine_vk_login_tip">VK账号登录</string>
+
+    <string name="setting_language_select_tip">语言</string>
+    <string name="setting_language_content_tip">设置当前软件显示的语言</string>
+    <string name="setting_diacnci_tip">防止软件闪退，悬浮球消失</string>
+
+    <string name="mine_qq_login_tip">QQ账号登录</string>
+    <string name="qq_str">QQ</string>
+    <string name="wx_str">微信</string>
+    <string name="login_third_not_install_str">你还未安装</string>
+    <string name="tiktok_no_support_str">暂不支持</string>
+
+    <string name="area_gesture_tips_str">在屏幕上面选择需要翻译的区域</string>
+    <string name="area_setting_str">区域翻译设置</string>
+    <string name="area_setting_gesture_str">手势滑动翻译</string>
+    <string name="area_setting_frame_str">框选翻译</string>
+    <string name="app_notice_name">隐藏通知</string>
+    <string name="app_notice_tips_name">隐藏任意烦人的通知</string>
+    <string name="app_voice_tips_name">翻译视频字幕、语音</string>
+
+    <string name="main_homt_title_home">主页</string>
+    <string name="main_homt_title_translate">文本</string>
+    <string name="main_homt_title_picture">拍照</string>
+    <string name="main_homt_title_myself">我的</string>
+
+    <string name="subtitle_translate_no_support_str">不支持使用字幕翻译功能</string>
+
+
+    <string name="show_result_subtitle_str">字幕显示</string>
+    <string name="setting_full_screen_tips_str">设置单击悬浮球的翻译模式显示样式（背景、颜色、大小、字体等）</string>
+    <string name="setting_subtitle_screen_tips_str">设置字幕翻译翻译模式显示样式（背景、颜色、大小、字体等）</string>
+    <string name="setting_subtitle_translate_title_str">字幕翻译设置</string>
+    <string name="setting_comic_screen_tips_str">设置漫画翻译翻译模式显示样式（背景、颜色、大小、字体等）</string>
+    <string name="setting_comic_translate_title_str">漫画翻译设置</string>
+    <string name="setting_comic_orientation_title_str">漫画文本方向</string>
+    <string name="setting_comic_orientation_auto_str">自动识别</string>
+    <string name="setting_float_screen_tips_str">设置悬浮球大小、透明度、自动贴边以及点击按键</string>
+    <string name="setting_float_translate_title_str">悬浮球设置</string>
+    <string name="setting_text_setting_title_str">文本设置</string>
+    <string name="setting_text_uppercase_title_str">大写文本</string>
+    <string name="setting_text_fonts_title_str">文本字体</string>
+    <string name="setting_text_auto_text_and_color_title_str">自动识别文本颜色和背景</string>
+    <string name="setting_text_show_background_str">显示文本背景</string>
+    <string name="setting_text_auto_close_str">自动关闭</string>
+    <string name="setting_text_view_close_str">按钮关闭</string>
+    <string name="setting_restore_str">还原设置</string>
+    <string name="setting_float_key_str">按键设置</string>
+    <string name="setting_hide_background_title_str">隐藏背景颜色</string>
+    <string name="setting_background_title_str">背景设置</string>
+    <string name="setting_duanluo_title_str">自动识别段落</string>
+    <string name="setting_duanluo_summary_title_str">解决文本换行问题</string>
+    <string name="error_key_tips">应用版本较低，请更新版本</string>
+
+    <string name="setting_area_screen_tips_str">设置区域翻译的结果显示、以及翻译方式</string>
+    <string name="setting_result_style_str">结果显示样式</string>
+    <string name="setting_long_none_translate_str">无操作</string>
+
+    <string name="setting_auto_screen_tips_str">设置自动翻译时间、间隔、显示样式等等</string>
+    <string name="setting_auto_translate_title_str">自动翻译设置</string>
+
+    <string name="mediaProjection_width_height_failed_tips">经过检测发现，屏幕横竖屏发生改变，请重新开始</string>
+
+    <string name="setting_comic_orientation_left_to_right_str">从左到右</string>
+    <string name="setting_comic_orientation_right_to_left_str">从右到左</string>
+    <string name="setting_comic_orientation_top_to_bottom_str">从上到下</string>
+    <string name="setting_comic_open_tips_str">经检测，发现页面有可能是漫画相关内容，如果是，请开启漫画识别以及设置漫画文本方向,识别更加精准</string>
+
+    <string name="setting_voice_translate_content_str">设置语音翻译翻译模式显示样式（背景、颜色、大小、字体等）</string>
+    <string name="setting_hide_voice_type_str">隐藏语音类型</string>
+
+    <string name="vip_12_hour">12小时</string>
+    <string name="vip_24_hour">24小时</string>
+    <string name="vip_100_hour">100小时</string>
+
+    <string name="name_google_app_str">谷歌翻译应用程序</string>
+    <string name="name_microsoft_app_str">微软翻译应用程序</string>
+    <string name="name_deepl_app_str">DeepL 翻译应用程序</string>
+    <string name="name_naver_papago_app_str">Naver Papago 翻译应用程序</string>
+    <string name="name_yandex_app_str">Yandex 翻译应用程序</string>
+
+    <string name="name_microsoft_str">微软</string>
+    <string name="name_deepl_str">Deepl</string>
+    <string name="name_yandex_str">Yandex</string>
+    <string name="name_naver_papago_str">Naver Papago</string>
+    <string name="translate_download_first_str">你需要先下载</string>
+
+    <string name="translate_google_not_found_str">没有发现谷歌翻译</string>
+    <string name="translate_microsoft_not_found_str">没有发现微软翻译</string>
+    <string name="translate_deepl_not_found_str">没有发现DeepL翻译</string>
+    <string name="translate_naver_papago_not_found_str">没有发现Naver Papago翻译</string>
+    <string name="translate_yandex_not_found_str">没有发现Yandex翻译</string>
+
+    <string name="tranlsate_mode_title_str">翻译模式</string>
+    <string name="tranlsate_mode_read_str">阅读模式</string>
+    <string name="tranlsate_mode_read_content_str">文章阅读、聊天、社交、论坛、微博、网页等</string>
+    <string name="tranlsate_mode_game_str">游戏模式</string>
+    <string name="tranlsate_mode_game_content_str">游戏、视频、漫画、电子书等</string>
+
+    <string name="translate_chat_title_str">聊天翻译设置</string>
+    <string name="translate_chat_content_str">设置聊天翻译显示的样式等</string>
+
+    <string name="translate_style_str">翻译风格</string>
+    <string name="style_simple_str">简单</string>
+    <string name="style_ordinary_str">普通</string>
+    <string name="style_speed_str">播报</string>
+    <string name="style_simple_content_str">只显示翻译</string>
+    <string name="style_ordinary_content_str">显示原文和翻译</string>
+    <string name="style_speed_content_str">播报译文</string>
+    <string name="style_screen_show_str">屏幕显示</string>
+    <string name="style_dialog_show_str">弹窗显示</string>
+
+    <string name="chat_use_count_str">已经使用</string>
+    <string name="chat_total_user_count_str">今日总次数</string>
+    <string name="chat_help_1">1、将悬浮球拖到需要翻译的内容上面</string>
+    <string name="chat_help_2">2、输入你的语言并将悬浮球拖到输入框，并发送外语文本</string>
+    <string name="screen_translate_help_1">1、单击悬浮球翻译整个页面</string>
+    <string name="screen_translate_help_2">2、长按悬浮球可以使用区域翻译、字幕翻译、图片翻译等</string>
+    <string name="chat_count_no_tips_str">今天聊天翻译次数已经使用完，你可以订阅后无限制使用</string>
+
+    <string name="accessibility_title_str">无障碍服务申请</string>
+    <string name="accessibility_content_str">\t\t感谢您信任并使用我们软件，为了能够识别屏幕信息，并且根据信息进行翻译，我们需要向您申请无障碍服务权限。\n\n
+                \t\t我们非常重视您的隐私保护和个人信息保护，未经您授权，我们不会与第三方共享或对外提供您的信息\n</string>
+
+    <string name="agree">同意</string>
+    <string name="disagree">不同意</string>
+    <string name="main_style_content_Str">选择聊天翻译结果显示样式</string>
+    <string name="chat_edittext_translate_direct">输入框反向翻译</string>
+    <string name="chat_can_use_count_str">可以使用</string>
+
+    <string name="sbtitle_help_1">1、长按悬浮球，选择字幕翻译</string>
+    <string name="sbtitle_help_2">2、选择需要翻译的区域，然后点击确认开始</string>
+
+    <string name="permission_record_applay_tips">我们需要获取相机权限进行拍照</string>
+    <string name="permission_image_applay_tips">我们需要获取录音权限进行语音识别和翻译</string>
+
+    <string name="dialog_color_picker">颜色选择</string>
+    <string name="press_color_to_apply">点击选择颜色</string>
+    <string name="login_account_title_str">账号</string>
+
+    <string name="permission_screen_new_content">屏幕翻译需要“屏幕录制”权限才能将文本显示在屏幕上进行翻译。屏幕翻译不会监控、收集或共享您的任何私人数据。我们需要您的同意才能继续</string>
+    <string name="accept_title_str">接受</string>
+    <string name="normal_mode_str">常规模式</string>
+    <string name="open_float_btn_str">点击开启【悬浮翻译按钮】</string>
+    <string name="permission_screen_new_title">屏幕录制权限申请</string>
+    <string name="setting_hide_top_btn_str">隐藏顶部按钮</string>
+
+
+    <string name="voice_title_name">语音翻译</string>
+    <string name="dialog_title_name">弹窗翻译</string>
+    <string name="ai_tips_name">Ai翻译提供更准确的翻译结果，但速度较慢，且不支持自动翻译、字幕翻译。</string>
+    <string name="area_gesture_new_tips_str">在屏幕上面滑动选择需要翻译的区域</string>
+    <string name="float_translation_new_tips">单击全屏翻译，长按唤起菜单窗口，体验更多功能</string>
+
+
+    <string name="subtitle_help_tips1">1、订阅会员可以无限制使用</string>
+    <string name="subtitle_help_tips2">2、每天赠送半个小时的体验时间，赠送时间不可以叠加</string>
+    <string name="unlock_more_new_features_desc">屏幕翻译、即时字幕翻译、语音翻译，全球无限使用</string>
+    <string name="purchase_premium_content1">智能翻译</string>
+    <string name="purchase_premium_content2">字幕翻译</string>
+
+    <string name="purchase_yongjiu_content">一次购买，永久使用</string>
+
+    <string name="tips_title_str">提示</string>
+    <string name="permission_subtitle_content">字幕翻译需要“屏幕录制”权限才能将文本显示在屏幕上进行翻译。我们不会监控、收集或共享您的任何私人数据。我们需要您的同意才能继续</string>
+    <string name="permission_voice_content">语音翻译需要“屏幕录制”权限才能将识别到手机中其他软件的声音然后进行识别翻译。我们不会监控、收集或共享您的任何私人数据。我们需要您的同意才能继续</string>
+
+    <string name="task_get_vip_time_str">做任务获取会员时长</string>
+    <string name="task_free_tips_str">免费</string>
+    <string name="task_free_user_tips_str">免费用户</string>
+    <string name="vip_ad_get_2_hourse_str">成功获取2小时会员时间</string>
+
+    <string name="permission_voice_title">后台录音权限申请</string>
+    <string name="permission_voice_new_content">语音翻译需要“后台录音”权限,该权限用于支持应用在后台持续录音，以实现行识别翻译功能。我们不会监控、收集或共享您的任何私人数据。我们需要您的同意才能继续</string>
+
+    <string name="block_title_str">禁止登录</string>
+    <string name="block_content_str">账号已被禁止登录,如有疑问，可以联系客服</string>
+    <string name="email_not_handle_str">没有找到邮箱可以使用</string>
+    <string name="speed_free_content_str">语音识别准确率不高，如想有更好的体验，可以切换其他方式</string>
+
+    <string name="task_today_user_title">一天只能获取一次，请明天再来</string>
+    <string name="main_file_str">文档</string>
+    <string name="main_file_translate_str">文档翻译</string>
+    <string name="file_save_translate_rsult_str">保存</string>
+    <string name="file_parse_fail_str">解析文件失败</string>
+    <string name="file_translate_fail_str">翻译文件失败</string>
+    <string name="file_source_str">原文</string>
+    <string name="file_translate_str">翻译</string>
+    <string name="mine_game_center_str">游戏中心</string>
+    <string name="file_select_type_str">选择DOCX、PDF、JPG文件进行翻译</string>
+    <string name="file_select_file_str">选择文件</string>
+
+    <string name="ad_load_error_tips">连续加载广告失败，触发补偿机制，获取两个小时的会员翻译时间</string>
+    <string name="ad_load_error_retry_tips">连续加载广告失败，但补偿机制一天只能获取一次</string>
+</resources>
