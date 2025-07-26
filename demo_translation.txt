@@ -1,0 +1,37 @@
+PDF Translation Results
+==================================================
+
+Page 1
+--------------------
+
+Original:
+English Sample Document
+This is a sample English document for PDF translation testing.
+Introduction
+This document demonstrates the capabilities of the PDF Translation Software.
+The software can extract text from PDF files and translate it into multiple
+languages using various translation services.
+Features
+- Supports 100+ languages
+- Multiple translation services (Google, Baidu, Microsoft)
+- Configurable translation parameters
+- PDF and text output formats
+- Intelligent text chunking
+- Detailed logging and error handling
+Usage
+The software provides a simple command-line interface for translating
+PDF documents. Users can specify source and target languages, output
+formats, and configuration options.
+Conclusion
+This PDF translation tool makes it easy to translate documents
+across language barriers, supporting global communication and
+understanding.
+
+Translation:
+[Translation Error: English Sample Document
+This is a sample English document for PDF translation testing.
+Introduction
+...]
+
+==================================================
+
