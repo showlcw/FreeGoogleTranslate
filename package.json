@@ -1,0 +1,32 @@
+{
+  "name": "brain-maze-city",
+  "version": "1.0.0",
+  "description": "脑洞迷城 - A puzzle maze game with match-3 block elimination mechanics",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "build": "echo 'No build process needed for pure HTML5 game'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "game",
+    "puzzle",
+    "maze",
+    "match-3",
+    "html5",
+    "javascript",
+    "pixel-art"
+  ],
+  "author": "Brain Maze City Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/showlcw/FreeGoogleTranslate.git"
+  },
+  "homepage": ".",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
