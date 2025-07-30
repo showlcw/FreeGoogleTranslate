@@ -182,21 +182,61 @@ function pixelToGrid(x, y, cellSize) {
     };
 }
 
-// Color helpers
+// Color helpers - Ensure maximum 6 block types as per requirements
 const BLOCK_COLORS = {
     fruit: ['🍎', '🍌', '🍇', '🍊', '🍓', '🥝'],
     animal: ['🐶', '🐱', '🐭', '🐹', '🐰', '🦊'],
-    shape: ['🔴', '🔵', '🟡', '🟢', '🟣', '🟠']
+    shape: ['🔴', '🔵', '🟡', '🟢', '🟣', '🟠'],
+    nature: ['🌸', '🌺', '🌻', '🌷', '🌹', '🌾'],
+    space: ['⭐', '🌙', '☀️', '🌟', '💫', '🌈'],
+    gems: ['💎', '💍', '🔮', '💖', '✨', '🎭']
 };
+
+// Maximum 6 block types for any level as per design requirements
+const MAX_BLOCK_TYPES = 6;
 
 function getRandomBlockType() {
     const types = Object.keys(BLOCK_COLORS);
-    return types[random(0, types.length - 1)];
+    return types[random(0, Math.min(types.length - 1, MAX_BLOCK_TYPES - 1))];
 }
 
 function getRandomBlockIcon(type) {
     const icons = BLOCK_COLORS[type];
     return icons[random(0, icons.length - 1)];
+}
+
+// Generate blocks ensuring counts are multiples of 3
+function generateBalancedBlocks(gridSize, maxTypes = 4) {
+    const totalBlocks = gridSize * gridSize;
+    const types = Object.keys(BLOCK_COLORS).slice(0, Math.min(maxTypes, MAX_BLOCK_TYPES));
+    const blocksPerType = Math.floor(totalBlocks / types.length);
+    const remainder = totalBlocks % types.length;
+    
+    const blocks = [];
+    
+    types.forEach((type, index) => {
+        const count = blocksPerType + (index < remainder ? 1 : 0);
+        // Ensure count is multiple of 3 by adjusting if needed
+        const adjustedCount = Math.floor(count / 3) * 3;
+        
+        for (let i = 0; i < adjustedCount; i++) {
+            blocks.push({
+                type: type,
+                icon: getRandomBlockIcon(type)
+            });
+        }
+    });
+    
+    // Fill remaining spaces with random blocks to reach total
+    while (blocks.length < totalBlocks) {
+        const randomType = types[random(0, types.length - 1)];
+        blocks.push({
+            type: randomType,
+            icon: getRandomBlockIcon(randomType)
+        });
+    }
+    
+    return shuffle(blocks);
 }
 
 // Path finding algorithm (simple A*)

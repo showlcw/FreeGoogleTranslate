@@ -11,6 +11,9 @@ class UIManager extends EventEmitter {
             score: 0
         };
         
+        // Initialize API client
+        this.apiClient = new APIClient();
+        
         this.init();
     }
     
@@ -106,6 +109,21 @@ class UIManager extends EventEmitter {
     
     showLoginScreen() {
         this.currentScreen = 'login';
+        
+        // Check if user is already authenticated
+        if (this.apiClient.isAuthenticated()) {
+            const user = this.apiClient.getCurrentUser();
+            this.playerData = {
+                name: user.name,
+                avatar: user.avatar,
+                level: this.playerData.level, // Keep current level progress
+                score: this.playerData.score
+            };
+            this.showGameScreen();
+            this.emit('playerLoggedIn', this.playerData);
+            return;
+        }
+        
         showScreen('login-screen');
     }
     
@@ -127,17 +145,60 @@ class UIManager extends EventEmitter {
         this.loadSettingsData();
     }
     
-    handleLogin(provider) {
-        // Simulate login process
-        showToast(`正在使用${provider === 'google' ? '谷歌' : '微信'}登录...`, 'success');
+    async handleLogin(provider) {
+        const button = document.getElementById(`${provider}-login`);
+        if (button) {
+            button.disabled = true;
+            button.innerHTML = `<span class="btn-icon">⏳</span> 登录中...`;
+        }
         
-        setTimeout(() => {
-            this.playerData.name = `${provider === 'google' ? 'Google' : '微信'}用户`;
-            this.playerData.avatar = provider === 'google' ? '🔍' : '💬';
-            this.savePlayerData();
-            this.showGameScreen();
-            this.emit('playerLoggedIn', this.playerData);
-        }, 1500);
+        try {
+            let authResponse;
+            
+            if (provider === 'google') {
+                authResponse = await this.apiClient.loginWithGoogle();
+            } else if (provider === 'wechat') {
+                authResponse = await this.apiClient.loginWithWeChat();
+            }
+            
+            if (authResponse.success) {
+                this.playerData = {
+                    name: authResponse.user.name,
+                    avatar: authResponse.user.avatar,
+                    level: this.playerData.level,
+                    score: this.playerData.score
+                };
+                
+                this.savePlayerData();
+                showToast(authResponse.message, 'success');
+                
+                // Try to load cloud game state
+                try {
+                    const cloudState = await this.apiClient.loadGameState();
+                    if (cloudState.success && cloudState.data) {
+                        // Merge cloud data with local data
+                        this.playerData.level = Math.max(cloudState.data.currentLevel || 1, this.playerData.level);
+                        this.playerData.score = Math.max(cloudState.data.score || 0, this.playerData.score);
+                        showToast('云端数据同步成功', 'success');
+                    }
+                } catch (error) {
+                    console.log('Cloud sync failed:', error.message);
+                }
+                
+                this.showGameScreen();
+                this.emit('playerLoggedIn', this.playerData);
+            }
+            
+        } catch (error) {
+            showToast(error.message, 'error');
+            console.error('Login failed:', error);
+        } finally {
+            if (button) {
+                button.disabled = false;
+                const iconText = provider === 'google' ? '🔍 谷歌登录' : '💬 微信登录';
+                button.innerHTML = iconText;
+            }
+        }
     }
     
     updateGameUI() {
@@ -386,19 +447,36 @@ class UIManager extends EventEmitter {
         this.loadLeaderboardData(tab);
     }
     
-    loadLeaderboardData(tab = 'global') {
+    async loadLeaderboardData(tab = 'global') {
         const leaderboardList = document.getElementById('leaderboard-list');
         if (!leaderboardList) return;
         
-        // Mock leaderboard data
-        const mockData = this.generateMockLeaderboard(tab);
+        // Show loading state
+        leaderboardList.innerHTML = '<div class="loading-text">正在加载排行榜...</div>';
         
-        leaderboardList.innerHTML = '';
-        
-        mockData.forEach((player, index) => {
-            const item = this.createLeaderboardItem(player, index + 1);
-            leaderboardList.appendChild(item);
-        });
+        try {
+            const response = await this.apiClient.getTopRanks(10);
+            
+            if (response.success) {
+                leaderboardList.innerHTML = '';
+                
+                response.data.forEach((player) => {
+                    const item = this.createLeaderboardItem(player, player.rank);
+                    leaderboardList.appendChild(item);
+                });
+                
+                if (response.data.length === 0) {
+                    leaderboardList.innerHTML = '<div class="empty-text">暂无排行榜数据</div>';
+                }
+            } else {
+                throw new Error('Failed to load leaderboard');
+            }
+            
+        } catch (error) {
+            console.error('Leaderboard loading failed:', error);
+            leaderboardList.innerHTML = '<div class="error-text">加载失败，请重试</div>';
+            showToast('排行榜加载失败', 'error');
+        }
     }
     
     generateMockLeaderboard(tab) {
@@ -417,17 +495,21 @@ class UIManager extends EventEmitter {
         const item = createElement('div', 'leaderboard-item');
         
         const rankEl = createElement('div', `rank-number ${this.getRankClass(rank)}`, rank.toString());
-        const avatarEl = createElement('div', 'player-avatar-small', player.avatar);
+        const avatarEl = createElement('div', 'player-avatar-small', player.avatar || '🎮');
         const statsEl = createElement('div', 'player-stats');
         
         statsEl.innerHTML = `
             <div class="player-name-small">${player.name}</div>
             <div class="player-level">最高关卡: ${player.level}</div>
+            <div class="player-score">得分: ${player.score.toLocaleString()}</div>
         `;
+        
+        const scoreEl = createElement('div', 'score-number', player.score.toLocaleString());
         
         item.appendChild(rankEl);
         item.appendChild(avatarEl);
         item.appendChild(statsEl);
+        item.appendChild(scoreEl);
         
         return item;
     }
@@ -518,5 +600,42 @@ class UIManager extends EventEmitter {
     updatePlayerScore(score) {
         this.playerData.score = score;
         this.savePlayerData();
+    }
+    
+    // Add method to sync game progress with backend
+    async syncGameProgress(gameStats) {
+        try {
+            if (this.apiClient.isAuthenticated()) {
+                // Update leaderboard
+                await this.apiClient.updateRank(gameStats);
+                
+                // Sync game state
+                await this.apiClient.syncGameState({
+                    currentLevel: gameStats.level,
+                    score: gameStats.score,
+                    totalMoves: gameStats.moves,
+                    timeElapsed: gameStats.timeElapsed
+                });
+                
+                showToast('游戏进度已同步', 'success');
+            }
+        } catch (error) {
+            console.error('Progress sync failed:', error);
+            showToast('同步失败，进度已保存到本地', 'warning');
+        }
+    }
+    
+    // Add logout functionality
+    logout() {
+        this.apiClient.logout();
+        this.playerData = {
+            name: '玩家',
+            avatar: '👤',
+            level: 1,
+            score: 0
+        };
+        this.savePlayerData();
+        this.showLoginScreen();
+        showToast('已退出登录', 'success');
     }
 }
