@@ -1,0 +1,434 @@
+/* UI Components - Leaderboard, Settings, etc. */
+
+/* Screen Headers */
+.screen-header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+    background: var(--primary-blue);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 0.8rem 1rem;
+    color: var(--text-dark);
+    font-family: var(--pixel-font);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #6BB6FF;
+    transform: translateX(-2px);
+}
+
+.screen-header h2 {
+    flex: 1;
+    text-align: center;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-right: 6rem; /* Compensate for back button */
+}
+
+/* Leaderboard Screen */
+#leaderboard-screen {
+    background: var(--background-gradient);
+    justify-content: flex-start;
+}
+
+.leaderboard-tabs {
+    display: flex;
+    background: white;
+    border-radius: var(--border-radius);
+    margin: 1rem;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem 2rem;
+    border: none;
+    background: white;
+    color: var(--text-dark);
+    font-family: var(--pixel-font);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: var(--accent-green);
+    color: var(--text-dark);
+}
+
+.tab-btn:hover:not(.active) {
+    background: #f5f5f5;
+}
+
+.leaderboard-content {
+    flex: 1;
+    width: 100%;
+    padding: 0 1rem 1rem;
+    overflow-y: auto;
+}
+
+.leaderboard-list {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s ease;
+}
+
+.leaderboard-item:hover {
+    background: #f9f9f9;
+}
+
+.leaderboard-item:last-child {
+    border-bottom: none;
+}
+
+.rank-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-green);
+    min-width: 50px;
+    text-align: center;
+}
+
+.rank-number.first {
+    color: #FFD700;
+}
+
+.rank-number.second {
+    color: #C0C0C0;
+}
+
+.rank-number.third {
+    color: #CD7F32;
+}
+
+.player-avatar-small {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    border: 2px solid white;
+}
+
+.player-stats {
+    flex: 1;
+}
+
+.player-name-small {
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 0.2rem;
+}
+
+.player-level {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Settings Screen */
+#settings-screen {
+    background: var(--background-gradient);
+    justify-content: flex-start;
+}
+
+.settings-content {
+    flex: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.setting-group {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.setting-group h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--primary-blue);
+    padding-bottom: 0.5rem;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-item label {
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.setting-item input[type="range"] {
+    width: 150px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: var(--primary-blue);
+    border-radius: 4px;
+    outline: none;
+}
+
+.setting-item input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.setting-item input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid var(--primary-blue);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-rules {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.game-rules p {
+    margin-bottom: 0.5rem;
+}
+
+#feedback-text {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    border: 2px solid var(--primary-blue);
+    border-radius: var(--border-radius);
+    font-family: var(--pixel-font);
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+}
+
+#feedback-text:focus {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 8px rgba(152, 251, 152, 0.3);
+}
+
+.submit-btn {
+    background: var(--accent-green);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem;
+    color: var(--text-dark);
+    font-family: var(--pixel-font);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+    box-shadow: var(--card-shadow);
+}
+
+.submit-btn:hover {
+    background: #7FE87F;
+    transform: translateY(-1px);
+}
+
+/* Notification/Toast */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-green);
+    color: var(--text-dark);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    z-index: 2000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    font-family: var(--pixel-font);
+    font-weight: bold;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.error {
+    background: #FF6B6B;
+    color: white;
+}
+
+.toast.success {
+    background: var(--accent-green);
+    color: var(--text-dark);
+}
+
+/* Share Modal */
+.share-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.share-image {
+    width: 300px;
+    height: 200px;
+    background: var(--background-gradient);
+    border-radius: var(--border-radius);
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--primary-blue);
+}
+
+.share-score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.share-text {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.share-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: var(--pixel-font);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.share-btn.wechat {
+    background: #07C160;
+    color: white;
+}
+
+.share-btn.copy {
+    background: var(--secondary-yellow);
+    color: var(--text-dark);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .screen-header {
+        padding: 0.8rem;
+    }
+    
+    .screen-header h2 {
+        font-size: 1.2rem;
+        margin-right: 5rem;
+    }
+    
+    .leaderboard-content {
+        padding: 0 0.5rem 0.5rem;
+    }
+    
+    .leaderboard-item {
+        padding: 0.8rem;
+    }
+    
+    .settings-content {
+        padding: 0.5rem;
+    }
+    
+    .setting-group {
+        padding: 1rem;
+    }
+    
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .setting-item input[type="range"] {
+        width: 100%;
+    }
+    
+    .share-image {
+        width: 250px;
+        height: 160px;
+    }
+    
+    .share-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-btn {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .leaderboard-item {
+        padding: 0.6rem;
+    }
+    
+    .rank-number {
+        font-size: 1.2rem;
+        min-width: 40px;
+    }
+    
+    .player-avatar-small {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+}

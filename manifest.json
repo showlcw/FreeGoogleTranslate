@@ -1,0 +1,24 @@
+{
+  "name": "脑洞迷城",
+  "short_name": "BrainMaze",
+  "description": "A pixel-style puzzle maze game with match-3 mechanics",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#87CEEB",
+  "background_color": "#87CEEB",
+  "categories": ["games", "puzzle"],
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiM4N0NFRUIiLz4KPHN2ZyB4PSI0OCIgeT0iNDgiIHdpZHRoPSI5NiIgaGVpZ2h0PSI5NiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMyAzaDF2MUgzVjN6bTAgMmgxdjFIM1Y1em0wIDJoMXYxSDNWN3ptMCAyaDF2MUgzVjl6bTAgMmgxdjFIM1YxMXptMCAyaDF2MUgzVjEzem0wIDJoMXYxSDNWMTV6bTAgMmgxdjFIM1YxN3ptMCAyaDF2MUgzVjE5em0yLTJoMXYxSDVWMTd6bTIgMGgxdjFIN1YxN3ptMiAwaDFWMTdIOXptMiAwaDFWMTdIMTF6bTIgMGgxVjE3SDEzem0yIDBoMVYxN0gxNXptMiAwaDFWMTdIMTd6bTItMmgxdjFIMTlWMTV6bTAtMmgxdjFIMTlWMTN6bTAtMmgxdjFIMTlWMTF6bTAtMmgxdjFIMTlWOXptMC0yaDF2MUgxOVY3em0wLTJoMXYxSDE5VjV6bTAtMmgxdjFIMTlWM3ptLTItMmgxdjFIMTdWMXptLTIgMGgxdjFIMTVWMXptLTIgMGgxdjFIMTNWMXptLTIgMGgxdjFIMTFWMXptLTIgMGgxdjFIOVYxem0tMiAwaDFWMUg3em0tMiAwaDFWMUg1eiIgZmlsbD0iIzJDM0U1MCIvPgogIDx0ZXh0IHg9IjEyIiB5PSIxNiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzJDM0U1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+8J+OtTwvdGV4dD4KPC9zdmc+Cg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiByeD0iNjQiIGZpbGw9IiM4N0NFRUIiLz4KPHN2ZyB4PSIxMjgiIHk9IjEyOCIgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTMgM2gxdjFIM1Yzem0wIDJoMXYxSDNWNXptMCAyaDF2MUgzVjd6bTAgMmgxdjFIM1Y5em0wIDJoMXYxSDNWMTF6bTAgMmgxdjFIM1YxM3ptMCAyaDF2MUgzVjE1em0wIDJoMXYxSDNWMTd6bTAgMmgxdjFIM1YxOXptMi0yaDF2MUg1VjE3em0yIDBoMXYxSDdWMTd6bTIgMGgxVjE3SDl6bTIgMGgxVjE3SDExem0yIDBoMVYxN0gxM3ptMiAwaDFWMTdIMTV6bTIgMGgxVjE3SDE3em0yLTJoMXYxSDE5VjE1em0wLTJoMXYxSDE5VjEzem0wLTJoMXYxSDE5VjExem0wLTJoMXYxSDE5Vjl6bTAtMmgxdjFIMTlWN3ptMC0yaDF2MUgxOVY1em0wLTJoMXYxSDE5VjN6bS0yLTJoMXYxSDE3VjF6bS0yIDBoMXYxSDE1VjF6bS0yIDBoMXYxSDEzVjF6bS0yIDBoMXYxSDExVjF6bS0yIDBoMXYxSDlWMXptLTIgMGgxVjFIN3ptLTIgMGgxVjFINXoiIGZpbGw9IiMyQzNFNTAiLz4KICA8dGV4dCB4PSIxMiIgeT0iMTYiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMyQzNFNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPvCfjoU8L3RleHQ+Cjwvc3ZnPgo=",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

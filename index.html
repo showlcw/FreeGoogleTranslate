@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="脑洞迷城 - 一个像素风格的消除解谜游戏">
+    <meta name="keywords" content="游戏,解谜,迷宫,消除,像素,HTML5">
+    <meta name="author" content="Brain Maze City Team">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#87CEEB">
+    
+    <!-- Mobile optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="脑洞迷城">
+    
+    <title>脑洞迷城 - Brain Maze City</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/ui.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen">
+        <div class="loading-content">
+            <div class="game-logo">脑洞迷城</div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loading-progress"></div>
+            </div>
+            <div class="loading-text">正在加载...</div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen hidden">
+        <div class="login-content">
+            <div class="game-logo">脑洞迷城</div>
+            <div class="login-subtitle">Brain Maze City</div>
+            <div class="login-buttons">
+                <button class="login-btn google-btn" id="google-login">
+                    <span class="btn-icon">🔍</span>
+                    谷歌登录
+                </button>
+                <button class="login-btn wechat-btn" id="wechat-login">
+                    <span class="btn-icon">💬</span>
+                    微信登录
+                </button>
+            </div>
+            <div class="login-footer">
+                <input type="checkbox" id="agree-terms">
+                <label for="agree-terms">我同意 <a href="#terms">用户协议</a> 和 <a href="#privacy">隐私政策</a></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Game Screen -->
+    <div id="game-screen" class="screen hidden">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="player-info">
+                <div class="player-avatar" id="player-avatar">👤</div>
+                <div class="player-details">
+                    <div class="player-name" id="player-name">玩家昵称</div>
+                    <div class="current-level">第 <span id="current-level">1</span> 关</div>
+                </div>
+            </div>
+            <button class="header-btn leaderboard-btn" id="leaderboard-btn">🏆 排行榜</button>
+        </header>
+
+        <!-- Game Area -->
+        <main class="game-area">
+            <div class="maze-container" id="maze-container">
+                <!-- Maze grid will be generated here -->
+            </div>
+            <div class="character" id="character">🧗‍♂️</div>
+        </main>
+
+        <!-- Bottom Toolbar -->
+        <footer class="game-footer">
+            <div class="toolbar">
+                <div class="power-ups">
+                    <button class="power-up-btn" id="key-item" data-type="key">
+                        <span class="item-icon">🔑</span>
+                        <span class="item-count" id="key-count">1</span>
+                    </button>
+                    <button class="power-up-btn" id="bomb-item" data-type="bomb">
+                        <span class="item-icon">💣</span>
+                        <span class="item-count" id="bomb-count">2</span>
+                    </button>
+                    <button class="power-up-btn" id="hint-item" data-type="hint">
+                        <span class="item-icon">💡</span>
+                        <span class="item-count" id="hint-count">3</span>
+                    </button>
+                </div>
+                <div class="game-controls">
+                    <button class="control-btn" id="hint-btn">💡 提示</button>
+                    <button class="control-btn" id="settings-btn">⚙️ 设置</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Leaderboard Screen -->
+    <div id="leaderboard-screen" class="screen hidden">
+        <div class="screen-header">
+            <button class="back-btn" id="leaderboard-back">← 返回</button>
+            <h2>脑洞排行榜</h2>
+        </div>
+        <div class="leaderboard-tabs">
+            <button class="tab-btn active" data-tab="global">全球榜</button>
+            <button class="tab-btn" data-tab="friends">好友榜</button>
+        </div>
+        <div class="leaderboard-content">
+            <div class="leaderboard-list" id="leaderboard-list">
+                <!-- Leaderboard items will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="screen hidden">
+        <div class="screen-header">
+            <button class="back-btn" id="settings-back">← 返回</button>
+            <h2>游戏设置</h2>
+        </div>
+        <div class="settings-content">
+            <div class="setting-group">
+                <h3>声音设置</h3>
+                <div class="setting-item">
+                    <label>背景音乐</label>
+                    <input type="range" id="bgm-volume" min="0" max="100" value="70">
+                </div>
+                <div class="setting-item">
+                    <label>音效</label>
+                    <input type="range" id="sfx-volume" min="0" max="100" value="80">
+                </div>
+            </div>
+            <div class="setting-group">
+                <h3>游戏说明</h3>
+                <div class="game-rules">
+                    <p>• 通过消除三个相同方块打通道路</p>
+                    <p>• 使用道具帮助通关</p>
+                    <p>• 到达出口即可过关</p>
+                </div>
+            </div>
+            <div class="setting-group">
+                <h3>意见反馈</h3>
+                <textarea id="feedback-text" placeholder="请输入您的意见和建议"></textarea>
+                <button class="submit-btn" id="submit-feedback">提交反馈</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="game-over-title">通关成功！</h3>
+            </div>
+            <div class="modal-body">
+                <div class="game-over-character">🎉</div>
+                <div class="game-over-message" id="game-over-message">恭喜通过第1关！</div>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn primary" id="next-level-btn">下一关</button>
+                <button class="modal-btn secondary" id="retry-btn">重试</button>
+                <button class="modal-btn" id="share-btn">分享</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="bgm" loop>
+        <source src="audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="move-sound">
+        <source src="audio/move.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="eliminate-sound">
+        <source src="audio/eliminate.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="victory-sound">
+        <source src="audio/victory.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="defeat-sound">
+        <source src="audio/defeat.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/game-engine.js"></script>
+    <script src="js/level-manager.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/audio-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
