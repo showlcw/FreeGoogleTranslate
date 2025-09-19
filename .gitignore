@@ -1,0 +1,28 @@
+# Android specific
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# AAR outputs
+*.aar
+
+# NDK
+obj/
+libs/
+
+# Model files (large binary files)
+*.bin
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log

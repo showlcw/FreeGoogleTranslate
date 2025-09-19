@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Free Google Translate</string>
+    <string name="whisper_initializing">Initializing Whisper...</string>
+    <string name="whisper_ready">Whisper ready</string>
+    <string name="recording_started">Recording started</string>
+    <string name="recording_stopped">Recording stopped</string>
+    <string name="model_downloading">Downloading model...</string>
+    <string name="model_loaded">Model loaded successfully</string>
+    <string name="permission_required">Microphone permission required</string>
+</resources>
