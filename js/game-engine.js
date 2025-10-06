@@ -16,7 +16,9 @@ class GameEngine extends EventEmitter {
                 keys: 1,
                 bombs: 2,
                 hints: 3
-            }
+            },
+            consecutiveFailures: 0, // Track consecutive elimination failures
+            maxFailures: 3 // Maximum allowed consecutive failures as per design
         };
         
         this.grid = [];
@@ -93,17 +95,25 @@ class GameEngine extends EventEmitter {
     createGrid() {
         const grid = [];
         
+        // Generate balanced blocks according to design requirements
+        const maxTypesForLevel = Math.min(6, Math.floor(this.gameState.currentLevel / 3) + 3);
+        const balancedBlocks = generateBalancedBlocks(this.gridSize, maxTypesForLevel);
+        let blockIndex = 0;
+        
         for (let y = 0; y < this.gridSize; y++) {
             const row = [];
             for (let x = 0; x < this.gridSize; x++) {
-                const blockType = getRandomBlockType();
-                const blockIcon = getRandomBlockIcon(blockType);
+                const blockData = balancedBlocks[blockIndex] || { 
+                    type: getRandomBlockType(), 
+                    icon: getRandomBlockIcon(getRandomBlockType()) 
+                };
+                blockIndex++;
                 
                 row.push({
                     x,
                     y,
-                    type: blockType,
-                    icon: blockIcon,
+                    type: blockData.type,
+                    icon: blockData.icon,
                     blocked: true,
                     selected: false,
                     locked: false,
@@ -238,11 +248,21 @@ class GameEngine extends EventEmitter {
         
         if (canEliminate) {
             this.eliminateBlocks();
+            this.gameState.consecutiveFailures = 0; // Reset failure count on success
             return true;
         } else {
             // Reset selections if no match
             this.clearSelections();
+            this.gameState.consecutiveFailures++;
+            
+            // Check for game over condition (3 consecutive failures)
+            if (this.gameState.consecutiveFailures >= this.gameState.maxFailures) {
+                this.handleGameOver('consecutive_failures');
+                return false;
+            }
+            
             this.emit('eliminationFailed');
+            showToast(`连续失败 ${this.gameState.consecutiveFailures}/${this.gameState.maxFailures} 次`, 'warning');
             return false;
         }
     }
@@ -250,6 +270,9 @@ class GameEngine extends EventEmitter {
     eliminateBlocks() {
         const blocksToEliminate = [...this.gameState.selectedBlocks];
         let hiddenItemsFound = [];
+        
+        // Get the block type from the first selected block
+        const firstBlockType = this.grid[blocksToEliminate[0].y][blocksToEliminate[0].x].type;
         
         // Process elimination
         blocksToEliminate.forEach(pos => {
@@ -277,7 +300,7 @@ class GameEngine extends EventEmitter {
         this.gameState.moves++;
         
         // Emit events
-        this.emit('blocksEliminated', blocksToEliminate.length, blocks[0].type);
+        this.emit('blocksEliminated', blocksToEliminate.length, firstBlockType);
         this.emit('movesMade', this.gameState.moves);
         
         if (hiddenItemsFound.length > 0) {
@@ -487,7 +510,34 @@ class GameEngine extends EventEmitter {
         
         if (path.length > 0) {
             this.emit('pathOpened', path);
+            
+            // Auto-move character toward exit as per design requirements
+            this.autoMoveCharacterToExit(path);
         }
+    }
+    
+    autoMoveCharacterToExit(path) {
+        if (path.length <= 1) return; // Already at destination or no path
+        
+        let currentStep = 0;
+        const moveInterval = setInterval(() => {
+            if (currentStep >= path.length - 1) {
+                clearInterval(moveInterval);
+                
+                // Check if reached exit
+                const exitPos = { x: this.gridSize - 1, y: this.gridSize - 1 };
+                if (this.gameState.playerPosition.x === exitPos.x && 
+                    this.gameState.playerPosition.y === exitPos.y) {
+                    this.completeLevel();
+                }
+                return;
+            }
+            
+            currentStep++;
+            this.gameState.playerPosition = { ...path[currentStep] };
+            this.emit('playerMoved', this.gameState.playerPosition);
+            
+        }, 300); // Move every 300ms for smooth animation
     }
     
     completeLevel() {
@@ -502,6 +552,24 @@ class GameEngine extends EventEmitter {
         
         this.emit('levelComplete', levelStats);
         this.saveGameState();
+    }
+    
+    handleGameOver(reason) {
+        this.gameState.gameEnded = true;
+        
+        if (this.gameTimer) {
+            clearInterval(this.gameTimer);
+        }
+        
+        const gameOverData = {
+            level: this.gameState.currentLevel,
+            reason: reason,
+            moves: this.gameState.moves,
+            score: this.gameState.score,
+            timeElapsed: this.gameState.timeElapsed
+        };
+        
+        this.emit('gameOver', gameOverData);
     }
     
     calculatePoints(blockCount, blockType) {

@@ -91,6 +91,10 @@ class BrainMazeGame extends EventEmitter {
             this.handleLevelComplete(stats);
         });
         
+        this.gameEngine.on('gameOver', (data) => {
+            this.handleGameOver(data);
+        });
+        
         this.gameEngine.on('itemCollected', (itemType) => {
             this.handleItemCollected(itemType);
         });
@@ -281,7 +285,39 @@ class BrainMazeGame extends EventEmitter {
         // Save progress
         this.saveGameProgress(stats);
         
+        // Sync with backend
+        this.uiManager.syncGameProgress(stats);
+        
         showToast(`第${stats.level}关完成! 得分: ${stats.score}`, 'success', 3000);
+    }
+    
+    handleGameOver(data) {
+        this.gameRunning = false;
+        this.audioManager.playLevelFailed();
+        
+        let reasonText = '';
+        switch (data.reason) {
+            case 'consecutive_failures':
+                reasonText = '连续失败3次';
+                break;
+            case 'time_limit':
+                reasonText = '时间到了';
+                break;
+            case 'move_limit':
+                reasonText = '步数用完了';
+                break;
+            default:
+                reasonText = '游戏结束';
+        }
+        
+        showToast(`关卡失败: ${reasonText}`, 'error');
+        
+        this.uiManager.showGameOverModal(false, { 
+            level: data.level,
+            reason: reasonText,
+            moves: data.moves,
+            score: data.score
+        });
     }
     
     handlePathOpened(path) {

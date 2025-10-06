@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脑洞迷城 - 单元测试</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 2rem;
+            background: linear-gradient(135deg, #87CEEB 0%, #F0E68C 100%);
+            min-height: 100vh;
+        }
+        .test-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2C3E50;
+        }
+        .test-output {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+        }
+        .run-tests-btn {
+            background: #87CEEB;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .run-tests-btn:hover {
+            background: #6BB6FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <div class="test-header">
+            <h1>🧪 脑洞迷城 - 单元测试</h1>
+            <p>Brain Maze City - Unit Tests</p>
+        </div>
+        
+        <button id="run-tests" class="run-tests-btn">🚀 运行所有测试</button>
+        
+        <div id="test-output" class="test-output">
+点击"运行所有测试"按钮开始测试...
+        </div>
+    </div>
+
+    <!-- Include game scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/api-client.js"></script>
+    <script src="js/game-engine.js"></script>
+    <script src="js/level-manager.js"></script>
+    <script src="js/ui-manager.js"></script>
+    <script src="js/audio-manager.js"></script>
+    <script src="js/game-tests.js"></script>
+
+    <script>
+        // Override console.log to display in the test output
+        const originalLog = console.log;
+        const originalError = console.error;
+        const testOutput = document.getElementById('test-output');
+        
+        function logToOutput(message, type = 'log') {
+            const timestamp = new Date().toLocaleTimeString();
+            const prefix = type === 'error' ? '❌' : type === 'warn' ? '⚠️' : 'ℹ️';
+            testOutput.textContent += `[${timestamp}] ${prefix} ${message}\n`;
+            testOutput.scrollTop = testOutput.scrollHeight;
+        }
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            logToOutput(args.join(' '));
+        };
+        
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            logToOutput(args.join(' '), 'error');
+        };
+        
+        // Mock DOM elements for testing
+        if (!document.getElementById('maze-container')) {
+            const mockElements = {
+                'maze-container': { addEventListener: () => {}, innerHTML: '', className: '' },
+                'player-name': { textContent: '' },
+                'player-avatar': { textContent: '' },
+                'current-level': { textContent: '' },
+                'key-count': { textContent: '' },
+                'bomb-count': { textContent: '' },
+                'hint-count': { textContent: '' }
+            };
+            
+            const originalGetElementById = document.getElementById;
+            document.getElementById = function(id) {
+                return mockElements[id] || originalGetElementById.call(document, id);
+            };
+            
+            document.querySelectorAll = function(selector) {
+                return [];
+            };
+        }
+        
+        document.getElementById('run-tests').addEventListener('click', async () => {
+            testOutput.textContent = '';
+            console.log('🧪 启动脑洞迷城单元测试...\n');
+            
+            try {
+                await testRunner.runAllTests();
+            } catch (error) {
+                console.error('测试运行失败:', error.message);
+            }
+            
+            console.log('\n✨ 测试完成！');
+        });
+    </script>
+</body>
+</html>
